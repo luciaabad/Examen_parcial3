@@ -1,106 +1,61 @@
 # Examen_parcial3
 https://github.com/luciaabad/Examen_parcial3.git
 
-# Sistema de Gestión de Estudiantes
+# Gestión de Estudiantes
 
-Este proyecto es una implementación en C++ de un sistema que gestiona estudiantes, materias y asistencias, con manejo de excepciones para situaciones inesperadas.
-
----
-
-## Tabla de Contenidos
-1. [Descripción General](#descripción-general)
-2. [Características](#características)
-3. [Estructuras y Clases](#estructuras-y-clases)
-   - [Estructura `Estudiante`](#estructura-estudiante)
-   - [Estructura `Asistencia`](#estructura-asistencia)
-4. [Instrucciones de Uso](#instrucciones-de-uso)
-5. [Ejemplo de Salida](#ejemplo-de-salida)
-6. [Instalación y Ejecución](#instalación-y-ejecución)
-7. [Manejo de Excepciones](#manejo-de-excepciones)
-8. [Notas](#notas)
-
----
-
-## Descripción General
-
-El sistema permite:
-- Registrar información básica de estudiantes.
-- Gestionar materias inscritas por los estudiantes.
-- Registrar y visualizar asistencias por materia.
-- Manejar errores como materias no registradas o estados inválidos de asistencia.
-
-El código está diseñado con un enfoque modular y usa las características modernas de C++.
-
----
+Este proyecto implementa un sistema en C++ para gestionar la información de estudiantes, sus materias inscritas, y su registro de asistencias. Además, incluye manejo de excepciones para situaciones inesperadas.
 
 ## Características
 
-1. **Gestión de Materias**:
-   - Agregar, eliminar y listar materias inscritas.
+### 1. Estructura `Asistencia`
+La estructura `Asistencia` gestiona el registro de asistencias de los estudiantes. Contiene los siguientes campos:
+- **Fecha**: Fecha de la asistencia (formato `YYYY-MM-DD`).
+- **Materia**: Nombre de la materia asociada.
+- **Estado**: El estado de la asistencia, que puede ser:
+  - `Asistió`
+  - `Falta`
+  - `Tardanza`
 
-2. **Registro de Asistencias**:
-   - Registrar la asistencia del estudiante por fecha y materia.
-   - Estados permitidos: `Asistió`, `Falta`, `Tardanza`.
+#### Métodos:
+- `mostrarAsistencia()`: Muestra la información de la asistencia en consola.
 
-3. **Manejo de Excepciones**:
-   - Validación de estados de asistencia.
-   - Validación de materias inscritas.
+### 2. Clase `Estudiante`
+La clase `Estudiante` gestiona la información básica de un estudiante, así como su lista de materias inscritas y su historial de asistencias.
 
----
+#### Atributos:
+- `nombre`: Nombre del estudiante.
+- `edad`: Edad del estudiante.
+- `promedio`: Promedio del estudiante.
+- `materias`: Vector que almacena las materias en las que el estudiante está inscrito.
+- `asistencias`: Vector que almacena los registros de asistencia.
 
-## Estructuras y Clases
+#### Métodos:
+- **Constructor**:
+  - Inicializa los atributos del estudiante (`nombre`, `edad`, `promedio`).
+- **Gestión de información básica**:
+  - `mostrarEstudiante()`: Muestra toda la información del estudiante, incluyendo materias inscritas y asistencias.
+- **Gestión de materias**:
+  - `agregarMateria(const std::string&)`: Agrega una materia al vector de materias. Lanza una excepción si la materia ya está inscrita.
+  - `eliminarMateria(const std::string&)`: Elimina una materia. Lanza una excepción si la materia no está inscrita.
+  - `mostrarMaterias()`: Muestra todas las materias inscritas.
+- **Gestión de asistencias**:
+  - `registrarAsistencia(const std::string&, const std::string&, const std::string&)`: Registra una asistencia para una materia. Verifica que la materia esté inscrita y que el estado de asistencia sea válido.
+  - `mostrarAsistencias()`: Muestra todas las asistencias registradas.
 
-### Estructura `Estudiante`
-Contiene:
-- **Atributos**:
-  - `std::string nombre`: Nombre del estudiante.
-  - `int edad`: Edad del estudiante.
-  - `float promedio`: Promedio general del estudiante.
-  - `std::vector<std::string> materias`: Lista de materias inscritas.
-  - `std::vector<Asistencia> asistencias`: Registro de asistencias.
+### 3. Manejo de Excepciones
+El programa incluye manejo de excepciones para los siguientes casos:
+- Intentar agregar una materia que ya está inscrita.
+- Intentar eliminar una materia no registrada.
+- Intentar registrar una asistencia para una materia no inscrita.
+- Proporcionar un estado de asistencia inválido.
 
-- **Métodos**:
-  - `void mostrarEstudiante() const`: Muestra los datos básicos del estudiante y sus materias.
-  - `void agregarMateria(const std::string&)`: Agrega una nueva materia.
-  - `void eliminarMateria(const std::string&)`: Elimina una materia específica.
-  - `void mostrarMaterias() const`: Lista todas las materias inscritas.
-  - `void registrarAsistencia(const std::string&, const std::string&, const std::string&)`: Registra una asistencia para una materia específica.
-  - `void mostrarAsistencias() const`: Muestra todas las asistencias registradas.
+Las excepciones son capturadas y mostradas al usuario.
 
-### Estructura `Asistencia`
-Contiene:
-- **Atributos**:
-  - `std::string fecha`: Fecha de la asistencia (formato `YYYY-MM-DD`).
-  - `std::string materia`: Materia asociada a la asistencia.
-  - `std::string estado`: Estado de la asistencia (`Asistió`, `Falta`, `Tardanza`).
+### 4. Ejemplo de Uso
+El programa incluye un ejemplo de uso en la función `main()`:
+1. Crea un estudiante con nombre, edad y promedio.
+2. Agrega materias.
+3. Registra asistencias.
+4. Muestra la información completa del estudiante.
+5. Maneja excepciones, como intentar agregar materias duplicadas.
 
----
-
-## Instrucciones de Uso
-
-### Registro de Materias
-1. Usar `agregarMateria` para inscribir materias.
-2. Usar `eliminarMateria` para desinscribir materias existentes.
-3. Usar `mostrarMaterias` para listar todas las materias.
-
-### Registro de Asistencia
-1. Usar `registrarAsistencia` pasando:
-   - Una fecha válida.
-   - Una materia previamente inscrita.
-   - Un estado válido (`Asistió`, `Falta`, `Tardanza`).
-2. Usar `mostrarAsistencias` para listar todas las asistencias.
-
-### Mostrar Datos del Estudiante
-- Llamar a `mostrarEstudiante` para imprimir toda la información básica.
-
----
-
-## Ejemplo de Salida
-
-### Código de Ejemplo
-```cpp
-Estudiante estudiante("Juan Pérez", 20, 9.2);
-estudiante.agregarMateria("Matemáticas");
-estudiante.registrarAsistencia("2024-11-19", "Matemáticas", "Asistió");
-estudiante.mostrarEstudiante();
-estudiante.mostrarAsistencias();
