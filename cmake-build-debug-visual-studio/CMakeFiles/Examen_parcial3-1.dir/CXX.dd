@@ -1,0 +1,5 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles\Examen_parcial3-1.dir\ProgramaC++\main.cpp.obj: dyndep
+
+build CMakeFiles\Examen_parcial3-1.dir\ProgramaC++\estudiante.cpp.obj: dyndep
+

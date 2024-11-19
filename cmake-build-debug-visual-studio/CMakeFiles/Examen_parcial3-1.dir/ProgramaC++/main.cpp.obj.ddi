@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\Examen_parcial3-1.dir\\ProgramaC++\\main.cpp.obj",
+            "outputs": [
+                "C:\\Users\\u\\Documents\\GitHub\\Examen_parcial3-1\\cmake-build-debug-visual-studio\\vc140.pdb",
+                "CMakeFiles\\Examen_parcial3-1.dir\\ProgramaC++\\main.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}
