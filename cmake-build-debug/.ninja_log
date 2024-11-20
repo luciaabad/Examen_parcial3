@@ -1,0 +1,19 @@
+# ninja log v6
+1	45	1732130900578808161	build.ninja	ec0ec5c0e95b970a
+0	33	1732130900578808161	build.ninja	ec0ec5c0e95b970a
+0	30	1732130900585675530	CMakeFiles/Examen_parcial3.dir/main.c.o	f40eeca0dcfe8feb
+0	30	1732130900585901694	CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Estudiante.c.o	966e200a93de6b8c
+0	30	1732130900585997484	CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Asistencia.c.o	7e6ca94a67e388a
+0	31	1732130900586087441	CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Materias.c.o	3730b517d9c17ddb
+1	36	1732131050395293481	CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Estudiante.c.o	966e200a93de6b8c
+1	36	1732131050395421438	CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Asistencia.c.o	7e6ca94a67e388a
+1	36	1732131050395528603	CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Materias.c.o	3730b517d9c17ddb
+0	38	1732131050395016860	CMakeFiles/Examen_parcial3.dir/main.c.o	f40eeca0dcfe8feb
+38	77	1732131050433034280	Examen_parcial3	c686f905d5e3173b
+1	37	1732131675639661028	CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Estudiante.c.o	966e200a93de6b8c
+1	37	1732131675639901148	CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Asistencia.c.o	7e6ca94a67e388a
+1	37	1732131675640026938	CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Materias.c.o	3730b517d9c17ddb
+0	39	1732131675639230119	CMakeFiles/Examen_parcial3.dir/main.c.o	f40eeca0dcfe8feb
+40	79	1732131675678250755	Examen_parcial3	c686f905d5e3173b
+0	37	1732131963768747114	CMakeFiles/Examen_parcial3.dir/main.c.o	f40eeca0dcfe8feb
+38	74	1732131963805957473	Examen_parcial3	c686f905d5e3173b
