@@ -1,14 +1,19 @@
-//
-// Created by Lucia Abad on 19/11/24.
-//
-
 #ifndef ESTUDIANTE_H
 #define ESTUDIANTE_H
 
-class Estudiante {
 
-};
+#define MAX_MATERIAS 10
+
+typedef struct {
+    char nombre[50];
+    int edad;
+    float promedio;
+    char materias[MAX_MATERIAS][50];
+    int numMaterias;
+
+} Estudiante;
+
+void mostrarEstudiante(Estudiante *estudiante);
 
 
-
-#endif //ESTUDIANTE_H
+#endif

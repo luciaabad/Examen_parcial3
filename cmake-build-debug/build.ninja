@@ -51,25 +51,29 @@ build cmake_object_order_depends_target_Examen_parcial3: phony || .
 
 build CMakeFiles/Examen_parcial3.dir/main.c.o: C_COMPILER__Examen_parcial3_unscanned_Debug /Users/luciaabad/Documents/GitHub/Examen_parcial3/main.c || cmake_object_order_depends_target_Examen_parcial3
   DEP_FILE = CMakeFiles/Examen_parcial3.dir/main.c.o.d
-  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/luciaabad/Documents/GitHub/Examen_parcial3/Ejercicio1_c
   OBJECT_DIR = CMakeFiles/Examen_parcial3.dir
   OBJECT_FILE_DIR = CMakeFiles/Examen_parcial3.dir
 
 build CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Estudiante.c.o: C_COMPILER__Examen_parcial3_unscanned_Debug /Users/luciaabad/Documents/GitHub/Examen_parcial3/Ejercicio1_c/Estudiante.c || cmake_object_order_depends_target_Examen_parcial3
   DEP_FILE = CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Estudiante.c.o.d
-  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Examen_parcial3.dir
-  OBJECT_FILE_DIR = CMakeFiles/Examen_parcial3.dir/Ejercicio1_c
-
-build CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Materia.c.o: C_COMPILER__Examen_parcial3_unscanned_Debug /Users/luciaabad/Documents/GitHub/Examen_parcial3/Ejercicio1_c/Materia.c || cmake_object_order_depends_target_Examen_parcial3
-  DEP_FILE = CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Materia.c.o.d
-  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/luciaabad/Documents/GitHub/Examen_parcial3/Ejercicio1_c
   OBJECT_DIR = CMakeFiles/Examen_parcial3.dir
   OBJECT_FILE_DIR = CMakeFiles/Examen_parcial3.dir/Ejercicio1_c
 
 build CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Asistencia.c.o: C_COMPILER__Examen_parcial3_unscanned_Debug /Users/luciaabad/Documents/GitHub/Examen_parcial3/Ejercicio1_c/Asistencia.c || cmake_object_order_depends_target_Examen_parcial3
   DEP_FILE = CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Asistencia.c.o.d
-  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/luciaabad/Documents/GitHub/Examen_parcial3/Ejercicio1_c
+  OBJECT_DIR = CMakeFiles/Examen_parcial3.dir
+  OBJECT_FILE_DIR = CMakeFiles/Examen_parcial3.dir/Ejercicio1_c
+
+build CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Materias.c.o: C_COMPILER__Examen_parcial3_unscanned_Debug /Users/luciaabad/Documents/GitHub/Examen_parcial3/Ejercicio1_c/Materias.c || cmake_object_order_depends_target_Examen_parcial3
+  DEP_FILE = CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Materias.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/luciaabad/Documents/GitHub/Examen_parcial3/Ejercicio1_c
   OBJECT_DIR = CMakeFiles/Examen_parcial3.dir
   OBJECT_FILE_DIR = CMakeFiles/Examen_parcial3.dir/Ejercicio1_c
 
@@ -81,7 +85,7 @@ build CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Asistencia.c.o: C_COMPILER__Ex
 #############################################
 # Link the executable Examen_parcial3
 
-build Examen_parcial3: C_EXECUTABLE_LINKER__Examen_parcial3_Debug CMakeFiles/Examen_parcial3.dir/main.c.o CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Estudiante.c.o CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Materia.c.o CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Asistencia.c.o
+build Examen_parcial3: C_EXECUTABLE_LINKER__Examen_parcial3_Debug CMakeFiles/Examen_parcial3.dir/main.c.o CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Estudiante.c.o CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Asistencia.c.o CMakeFiles/Examen_parcial3.dir/Ejercicio1_c/Materias.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6
   OBJECT_DIR = CMakeFiles/Examen_parcial3.dir
   POST_BUILD = :
