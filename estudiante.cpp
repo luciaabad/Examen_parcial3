@@ -5,8 +5,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
-
+#include <algorithm> // Include algorithm for std::find
+//hola
 //Excepciones
 class FechaInvalidaException : public std::runtime_error {
 public:
@@ -48,7 +48,7 @@ void agregarMateria(Estudiante& estudiante, const std::string& materia) {
 }
 
 bool buscarMateria(const std::vector<std::string>& materias, const std::string& materia) {
-    if (std::find(materias.begin(), materias.end(), materia) == materias.end()) {
+    if (std::find(materias.begin(), materias.end(), materia) == materias.cend()) {
         throw MateriaNoEncontradaException("La materia no está registrada: " + materia);
     }
     return true;
@@ -57,7 +57,7 @@ bool buscarMateria(const std::vector<std::string>& materias, const std::string& 
 void eliminarMateria(Estudiante& estudiante, const std::string& materia) {
     buscarMateria(estudiante.materias, materia);
     auto it = std::find(estudiante.materias.begin(), estudiante.materias.end(), materia);
-    if (it != estudiante.materias.end()) {
+    if (it != estudiante.materias.cend()) {
         estudiante.materias.erase(it);
     } else {
         std::cout << "Materia no encontrada.\n";
@@ -91,69 +91,4 @@ void mostrarAsistencia(const Estudiante& estudiante) {
                   << ", Materia: " << asistencia.materia
                   << ", Estado: " << asistencia.estado << "\n";
     }
-}
-
-int main() {
-    Estudiante estudiante = {"Juan Perez", 20, 8.5};
-    mostrarEstudiante(estudiante);
-    /*
-    *   Usa std::string, que permite manejar cadenas dinámicas de forma más sencilla y segura.
-    *   Pasa la estructura por referencia (const Estudiante&) para evitar copias innecesarias.
-    *   C++ permite agregar métodos dentro de la estructura si se convierte en una clase.
-    *   C++ soporta programación orientada a objetos (herencia, polimorfismo, etc.).
-    *   Librerías estándar	C++ tiene una rica biblioteca estándar para operaciones comunes.
-     */
-
-    agregarMateria(estudiante, "Matemáticas");
-    agregarMateria(estudiante, "Física");
-    agregarMateria(estudiante, "Química");
-
-    mostrarMaterias(estudiante);
-
-    eliminarMateria(estudiante, "Física");
-    mostrarMaterias(estudiante);
-    /*
-    * Usa std::vector, que gestiona dinámicamente la memoria automáticamente.
-    * Más sencillo gracias a la STL (std::vector) y sus funciones integradas como push_back y erase.
-    * Automáticamente extensible con std::vector.
-    * std::vector verifica límites automáticamente, reduciendo errores.
-     */
-
-    registrarAsistencia(estudiante, "2024-11-19", "Matemáticas", "Asistió");
-    registrarAsistencia(estudiante, "2024-11-20", "Física", "Falta");
-
-    mostrarAsistencia(estudiante);
-    /*
-    * Usa std::vector para manejar dinámicamente los registros de asistencia.
-    * Fácil de ampliar y modificar gracias a las estructuras dinámicas de la STL.
-    * std::string simplifica el trabajo con cadenas.
-    * La memoria dinámica se maneja automáticamente con std::vector.
-     */
-
-    try {
-        registrarAsistencia(estudiante, "20224-11-20", "Física", "Falta");
-    } catch (FechaInvalidaException exception) {
-        std::cerr << exception.what() << std::endl;
-    }
-
-
-    try {
-        buscarMateria(estudiante.materias, "Politica");
-    } catch (MateriaNoEncontradaException exception) {
-        std::cerr << exception.what() << std::endl;
-    }
-
-
-    try {
-        eliminarMateria(estudiante, "Lengua 2");
-    } catch (MateriaNoEncontradaException exception) {
-        std::cerr << exception.what() << std::endl;
-    }
-
-    /*
-     * C++ ofrece un manejo más limpio, estructurado y moderno para tratar errores gracias a las excepciones.
-     * Esto resulta en un código más fácil de mantener y entender, especialmente en sistemas complejos.
-     */
-
-    return 0;
 }
