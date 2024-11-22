@@ -7,8 +7,16 @@
 				{
 					"build" : ".",
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
 					"projectIndex" : 0,
-					"source" : "."
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
 				}
 			],
 			"name" : "Debug",
@@ -19,10 +27,23 @@
 					[
 						0
 					],
-					"name" : "Project"
+					"name" : "ExParcial3",
+					"targetIndexes" : 
+					[
+						0
+					]
 				}
 			],
-			"targets" : []
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ExParcial3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ExParcial3-Debug-26cbc797f333efd6dfb7.json",
+					"name" : "ExParcial3",
+					"projectIndex" : 0
+				}
+			]
 		}
 	],
 	"kind" : "codemodel",

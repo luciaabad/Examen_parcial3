@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/Project"
+			"value" : "C:/Program Files (x86)/Examen_parcial3-1"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Project"
+			"value" : "ExParcial3"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1270,7 +1270,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Project_BINARY_DIR",
+			"name" : "ExParcial3_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1282,7 +1282,7 @@
 			"value" : "C:/Users/u/Documents/GitHub/Examen_parcial3-1/cmake-build-debug"
 		},
 		{
-			"name" : "Project_IS_TOP_LEVEL",
+			"name" : "ExParcial3_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1294,7 +1294,43 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Project_SOURCE_DIR",
+			"name" : "ExParcial3_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/u/Documents/GitHub/Examen_parcial3-1"
+		},
+		{
+			"name" : "Examen_parcial3-1_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/u/Documents/GitHub/Examen_parcial3-1/cmake-build-debug"
+		},
+		{
+			"name" : "Examen_parcial3-1_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "Examen_parcial3-1_SOURCE_DIR",
 			"properties" : 
 			[
 				{
